@@ -15,43 +15,59 @@ fetch("https://raw.githubusercontent.com/Adalab/Easley-ejercicios-de-fin-de-sema
         const colorDiv4 = document.createElement('div');
         const colorDiv5 = document.createElement('div');
 
+        const paletteList = [
+            colorDiv1,
+            colorDiv2,
+            colorDiv3,
+            colorDiv4,
+            colorDiv5
+        ]
+
         palette.style.height = '80px';
         palette.style.width = '500px';
         // palette.style.border = 'solid black 1.5px';
 
 
+        for (let i = 0; i < paletteList.length; i++) {
+            const colorPalette = paletteList[i];
 
-        colorDiv1.style.background = `#${dataColors[0]}`;
-        colorDiv1.style.height = '80px';
-        colorDiv1.style.width = '80px';
-        colorDiv1.style.border = 'solid black 1.5px';
+            colorPalette.className = "color__item";
+            colorPalette.style.background = `#${dataColors[i]}`;
+            colorPalette.style.height = '80px';
+            colorPalette.style.width = '80px';
+            colorPalette.style.border = 'solid black 1.5px';
 
-        colorDiv2.style.background = `#${dataColors[1]}`;
-        colorDiv2.style.height = '80px';
-        colorDiv2.style.width = '80px';
-        colorDiv2.style.border = 'solid black 1.5px';
+            palette.appendChild(colorPalette);
 
-        colorDiv3.style.background = `#${dataColors[2]}`;
-        colorDiv3.style.height = '80px';
-        colorDiv3.style.width = '80px';
-        colorDiv3.style.border = 'solid black 1.5px';
+        }
 
-        colorDiv4.style.background = `#${dataColors[3]}`;
-        colorDiv4.style.height = '80px';
-        colorDiv4.style.width = '80px';
-        colorDiv4.style.border = 'solid black 1.5px';
+        // palette.appendChild(colorDiv2);
+        // palette.appendChild(colorDiv3);
+        // palette.appendChild(colorDiv4);
+        // palette.appendChild(colorDiv5);
 
-        colorDiv5.style.background = `#${dataColors[4]}`;
-        colorDiv5.style.height = '80px';
-        colorDiv5.style.width = '80px';
-        colorDiv5.style.border = 'solid black 1.5px';
+        // colorDiv2.style.background = `#${dataColors[1]}`;
+        // colorDiv2.style.height = '80px';
+        // colorDiv2.style.width = '80px';
+        // colorDiv2.style.border = 'solid black 1.5px';
+
+        // colorDiv3.style.background = `#${dataColors[2]}`;
+        // colorDiv3.style.height = '80px';
+        // colorDiv3.style.width = '80px';
+        // colorDiv3.style.border = 'solid black 1.5px';
+
+        // colorDiv4.style.background = `#${dataColors[3]}`;
+        // colorDiv4.style.height = '80px';
+        // colorDiv4.style.width = '80px';
+        // colorDiv4.style.border = 'solid black 1.5px';
+
+        // colorDiv5.style.background = `#${dataColors[4]}`;
+        // colorDiv5.style.height = '80px';
+        // colorDiv5.style.width = '80px';
+        // colorDiv5.style.border = 'solid black 1.5px';
 
 
-        palette.appendChild(colorDiv1);
-        palette.appendChild(colorDiv2);
-        palette.appendChild(colorDiv3);
-        palette.appendChild(colorDiv4);
-        palette.appendChild(colorDiv5);
+
 
 
 
