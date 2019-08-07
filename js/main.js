@@ -37,9 +37,10 @@ fetch("https://raw.githubusercontent.com/Adalab/Easley-ejercicios-de-fin-de-sema
             const newContentTitle = document.createTextNode(news[i].title);
             const newImage = document.createElement('img');
 
-            newItemList.className = '.new__item';
+            newItemList.className = "new__item news__item--no-image-visible";
             newTitle.appendChild(newContentTitle);
-            newTitle.className = '.news__title';
+            newTitle.className = 'news__title';
+            newImage.className = 'news__image';
 
             // Exercise 2. Class mars of Mars/Martian titles
             if (news[i].title.includes("Mars") || news[i].title.includes("Martian")) {
@@ -53,5 +54,12 @@ fetch("https://raw.githubusercontent.com/Adalab/Easley-ejercicios-de-fin-de-sema
             newItemList.appendChild(newTitle);
             newItemList.appendChild(newImage);
         }
+        const newElements = document.querySelectorAll('li');
 
+        for (let listElement of newElements) {
+            function showNews() {
+                listElement.classList.toggle("news__item--no-image-visible");
+            }
+            listElement.addEventListener("click", showNews);
+        }
     })
