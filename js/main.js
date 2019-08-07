@@ -36,11 +36,15 @@ for (let i = 0; i < data.length; i++) {
     newTitle.appendChild(newContentTitle);
     newTitle.className = '.news__title';
 
+    // Exercise 2. Class mars of Mars/Martian titles
+    if (data[i].title.includes("Mars") || data[i].title.includes("Martian")) {
+        newItemList.classList.add("news__item--from-mars");
+    }
+
     newImage.src = data[i].image;
     newImage.alt = data[i].title;
 
     listNews.appendChild(newItemList);
-    listNews.appendChild(newTitle);
-    listNews.appendChild(newImage);
-
+    newItemList.appendChild(newTitle);
+    newItemList.appendChild(newImage);
 }
