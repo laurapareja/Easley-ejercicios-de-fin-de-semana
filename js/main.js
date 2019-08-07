@@ -8,8 +8,8 @@ fetch("https://raw.githubusercontent.com/Adalab/Easley-ejercicios-de-fin-de-sema
 
         for (let i = 0; i < 5; i++) {
             const palette = document.createElement('div');
-            palette.style.height = '80px';
-            palette.style.width = '500px';
+            palette.style.height = '90px';
+            palette.style.width = '410px';
             palette.className = `palette palette${i}`;
 
             const colorDiv1 = document.createElement('div');
@@ -45,6 +45,15 @@ fetch("https://raw.githubusercontent.com/Adalab/Easley-ejercicios-de-fin-de-sema
         const body = document.querySelector('.body');
         for (let i = 0; i < paletteList.length; i++) {
             body.appendChild(paletteList[i]);
+        }
+        const paletteElements = document.querySelectorAll('.palette');
+        console.log(paletteElements);
+
+        for (let paletteElement of paletteElements) {
+            function choosePalette() {
+                paletteElement.classList.toggle("favourite");
+            }
+            paletteElement.addEventListener("click", choosePalette);
         }
     })
 
